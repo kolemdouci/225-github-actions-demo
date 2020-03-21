@@ -10,10 +10,10 @@ on:
 
 jobs:
   test_pull_request:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest     # change to "Windows" or "MacOS"
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2  # this line(s) bring the source code to current working directory and virt. machine;!netestavano na tvym kompu
+      - uses: actions/setup-node@v1 # run NodeJS to be able to run certain commands
         with:
           node-version: 10
       - run: npm ci
