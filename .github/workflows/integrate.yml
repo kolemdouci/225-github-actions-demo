@@ -2,10 +2,10 @@ name: Node Continuous Integration
 
 on:
   pull_request:
-    branches: [ master, mujbranch ]
+    branches: [ master ]
   push:
-    branches:
-              - master  
+    branches: [ master, mujbranch ]
+               
 
 
 jobs:
