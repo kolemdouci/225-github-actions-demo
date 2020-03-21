@@ -4,7 +4,6 @@ const dayOfTheWeek = (date = new Date()) => {
     return days[date.getDay()];
 }
 
-//test comment
 try {
     document.getElementById('day').innerText = dayOfTheWeek();
 } catch(err) {}
