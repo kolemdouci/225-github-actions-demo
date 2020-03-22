@@ -2,7 +2,7 @@ name: Firebase Continuous Deployment
 
 on:
   push:
-    branches: [ master, mujbranch ]     #blabla
+    branches: [ master, mujbranch ]     
 
 
 jobs:
@@ -20,3 +20,4 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          FIREBASE_PROJECT: GitHub Actions test     # set the project name in Firebase into which we deploy
