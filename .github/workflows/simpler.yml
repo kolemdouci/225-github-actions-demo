@@ -1,0 +1,24 @@
+name: CI/CD + Firebase deployment
+
+on:
+  push:
+    branches:
+      - master
+      - mujbranch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: CI and Build
+      run: |
+        npm ci
+        npm run build
+    - name: Firebase Deploy
+      run: |
+        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+        
+        

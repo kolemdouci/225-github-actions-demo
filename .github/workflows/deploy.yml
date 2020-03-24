@@ -1,8 +1,8 @@
 name: Firebase Continuous Deployment
 
-on:
-  push:
-    branches: [ master, mujbranch ]     #blabla
+#on:
+  #push:
+    #branches: [ master, mujbranch ]     #blabla
 
 
 jobs:
